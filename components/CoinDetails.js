@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import DropdownBtn from './buttons/DropDownBtn'
+import DropdownBtn from './buttons/DropdownBtn'
 import Rate from './cmc-table/Rate'
 import RateFilled from './buttons/RateFilled'
 import { useMoralis } from 'react-moralis'

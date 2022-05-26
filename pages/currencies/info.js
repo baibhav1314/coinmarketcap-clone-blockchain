@@ -1,4 +1,4 @@
-import Header from '../../components/header'
+import Header from '../../components/Header'
 import solana from '../../assets/solana.png'
 import Usd from '../../assets/svg/usd'
 import { useEffect, useState } from 'react'
