@@ -5,10 +5,10 @@ import { CoinMarketProvider } from '../context/context'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <MoralisProvider
-      // serverUrl={process.env.NEXT_PUBLIC_SERVER}
-      // appId={process.env.NEXT_PUBLIC_APP_ID}
-      serverUrl={'https://ggqjqhiz8eok.usemoralis.com:2053/server'}
-      appId={'nuPpNavDEc5DhFrRLTG8lFqYLMA2AFkwcgDgYjoV'}
+      // serverUrl={'https://ggqjqhiz8eok.usemoralis.com:2053/server'}
+      // appId={'nuPpNavDEc5DhFrRLTG8lFqYLMA2AFkwcgDgYjoV'}
+      serverUrl={`${process.env.NEXT_PUBLIC_MORALIS_SERVER}`}
+      appId={`${process.env.NEXT_PUBLIC_MORALIS_APPID}`}
     >
       <CoinMarketProvider>
         <Component {...pageProps} />
