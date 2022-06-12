@@ -1,23 +1,94 @@
-# Next.js + Tailwind CSS Example
+# Amazon Clone Blockchain
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+a decentralised app that let users get information about the top 10 cryptocurrencies from Coinmarketcap API and allow them to swap
+tokens.
 
-## Deploy your own
+## Tech Stack
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+**Client:** Next.js, Context API, TailwindCSS, Web3.js, Web3UiKit
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+**Server:** Moralis
 
-## How to use
+**Smart Contract:** Solidity, Hardhat
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Screenshots
+
+![coin1](https://user-images.githubusercontent.com/60654743/173233498-a8450f62-8a86-4eea-9136-50ac2117cfe7.png)
+
+![coin2](https://user-images.githubusercontent.com/60654743/173233508-3f89a2dd-de87-4ad8-810d-4d6abff0e932.png)
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
+  git clone https://github.com/baibhav1314/coinmarketcap-clone-blockchain.git
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Go to the project directory
+
+```bash
+  cd coinmarketcap-clone-blockchain
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Go to the smart-contract directory
+
+```bash
+  cd smart-contract
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  cd ..
+  npm run start
+```
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`NEXT_PUBLIC_MORALIS_SERVER` = Your Moralis ServerUrl
+
+`NEXT_PUBLIC_MORALIS_APPID` = Your Moralis appId
+
+Then add a .env file inside the smart-contract folder
+
+```bash
+cd smart-contract
+```
+
+`SPEEDY_NODE` = Your speedy node url from Moralis Speedy Nodes
+
+`ACCOUNT`= Your private key
+
+## Deploying Smart Contract
+
+To deploy the smart contract run
+
+```bash
+  cd smart-contract
+  npx hardhat run --network <your-network> scripts/deploy.js
+```
+
+Note the deployed contract address and update it in the `coinmarketcap-clone-blockchain/lib` folder along with the contract `abi`
+
+## Deploying Project
+
+Set up the netlify and then run
+
+```bash
+netlify deploy
+```
