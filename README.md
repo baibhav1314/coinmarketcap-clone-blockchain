@@ -1,4 +1,4 @@
-# Amazon Clone Blockchain
+# Cointmarketcap Blockchain
 
 a decentralised app that let users get information about the top 10 cryptocurrencies from Coinmarketcap API and allow them to swap
 tokens.
